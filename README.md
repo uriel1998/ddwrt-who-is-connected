@@ -21,7 +21,7 @@ ones that you are not interested in. For example, if the device that
 is statically assigned to 192.168.1.110 is "Spouse's Android" then 
 ensure that you have this line:
 
-   sed -i '/192.168.1.110/ s/$/ - Spouse iPhone/' $activetemp
+```sed -i '/192.168.1.110/ s/$/ - Spouse iPhone/' $activetemp
    
 and proceed accordingly.
 
@@ -33,11 +33,12 @@ to trigger other things instead of relying on portable devices.
 
 For a simple example, you could have a cronjob that has the following:
 
-   bob=$(grep -c "Spouse iPhone" $HOME/client_ips.txt)
+```bob=$(grep -c "Spouse iPhone" $HOME/client_ips.txt)
    if [ "$bob" == "1" ];then
       do a command that your spouse wants when they get home
    fi
-   
+```
+
 (Note that you will have to use the full path of $HOME if you're really
 using a cron job...)
 
@@ -45,7 +46,7 @@ using a cron job...)
 #Output
 
 The output file will look like this:
-
+```
    192.168.1.104 - Name of Device
    192.168.1.108 - Name of Device
    192.168.1.109 - Name of Device
@@ -59,6 +60,7 @@ The output file will look like this:
    * 192.168.1.102 - Name of Device
    * 192.168.1.105 - Name of Device
    * 192.168.1.107 - Name of Device
+```
 
 Please note that additional routers may appear in the "offline" list if
 you have configured them to reject PING requests.
