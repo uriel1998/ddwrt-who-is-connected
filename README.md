@@ -27,6 +27,9 @@ sed -i '/192.168.1.110/ s/$/ - Spouse iPhone/' $activetemp
    
 and proceed accordingly.
 
+You will also want to either edit the output file (line 14) or pass it
+as the first commandline option.
+
 #Utility
 
 Aside from a fairly easy monitoring service (you can have this redirect
