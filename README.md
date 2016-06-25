@@ -21,7 +21,9 @@ ones that you are not interested in. For example, if the device that
 is statically assigned to 192.168.1.110 is "Spouse's Android" then 
 ensure that you have this line:
 
-```sed -i '/192.168.1.110/ s/$/ - Spouse iPhone/' $activetemp
+```
+sed -i '/192.168.1.110/ s/$/ - Spouse iPhone/' $activetemp
+```
    
 and proceed accordingly.
 
@@ -33,7 +35,8 @@ to trigger other things instead of relying on portable devices.
 
 For a simple example, you could have a cronjob that has the following:
 
-```bob=$(grep -c "Spouse iPhone" $HOME/client_ips.txt)
+```
+   bob=$(grep -c "Spouse iPhone" $HOME/client_ips.txt)
    if [ "$bob" == "1" ];then
       do a command that your spouse wants when they get home
    fi
