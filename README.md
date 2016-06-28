@@ -48,6 +48,10 @@ For a simple example, you could have a cronjob that has the following:
 (Note that you will have to use the full path of $HOME if you're really
 using a cron job...)
 
+You can see example.sh as a fairly robust starting point, or even full 
+featured way to use this, if you don't mind specifying the command line
+variables.
+
 
 #Output
 
