@@ -1,5 +1,14 @@
 #!/bin/bash
 
+########################################################################
+# This file is designed to get active and static leases from a DD-WRT
+# router. It's designed to be called as part of an SSH connection
+# to the router, as demonstrated below. 
+#
+# ssh -q 192.168.1.1 2> /dev/null < ./routerinfo.sh > $storetemp 
+#
+#########################################################################
+
 netstat -nr | grep "UG" | awk '{print $2}'
 echo "###"
 cd /tmp

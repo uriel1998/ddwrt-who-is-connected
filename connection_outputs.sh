@@ -10,19 +10,28 @@
 # configured them to not respond to pings
 ########################################################################
 
-if [ "$1" == "" ]; then
-	outfile=$HOME/client_ips.txt
-else
-	outfile="$1"
-fi
-
 ########################################################################
-# tempfile declarations
+# Declarations
 ########################################################################
 storetemp=$(tempfile)
 scratch=$(tempfile)
 hosttemp=$(tempfile)
 activetemp=$(tempfile)
+
+declare outfile
+declare routergateway
+
+########################################################################
+# Input variables; there's only one right now. I may put in more to 
+# query different IPs for the router, but honestly, if you know how to
+# set up SSH with a keyfile, you probably can change that.
+########################################################################
+
+if [ "$1" == "" ]; then
+	outfile=$HOME/client_ips.txt
+else
+	outfile="$1"
+fi
 
 ########################################################################
 # Separating out the router information into active connections
