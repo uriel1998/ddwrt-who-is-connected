@@ -30,6 +30,11 @@ and proceed accordingly.
 You will also want to either edit the output file (line 14) or pass it
 as the first commandline option.
 
+If you want to use the output in a webpage, uncomment line 96.
+
+If you want to use a particular SSH configuration file, see the example
+on line 42
+
 #Utility
 
 Aside from a fairly easy monitoring service (you can have this redirect

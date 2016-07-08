@@ -36,8 +36,11 @@ fi
 ########################################################################
 # Separating out the router information into active connections
 # and those which are simply part of static DHCP leases
+# Please note the commented example which demonstrates how to 
+# utilize a certain user's SSH config file.
 ########################################################################
-ssh -q 192.168.1.1 2> /dev/null < ./routerinfo.sh > $storetemp 
+#/usr/bin/ssh -F /home/steven/.ssh/config  -q 192.168.1.1 2> /dev/null < ./routerinfo.sh > $storetemp 
+/usr/bin/ssh -q 192.168.1.1 2> /dev/null < ./routerinfo.sh > $storetemp 
 routergateway=$(head -1 $storetemp)
 sed -n '/###/,/%%%/p' $storetemp | grep -v -e "###" -e "%%%" > $scratch
 sed -n '/%%%/,/@@@/p' $storetemp | grep -v -e "%%%" -e "@@@"> $activetemp
@@ -86,6 +89,12 @@ sed -i '/192.168.1.120/ s/$/ - the rest/' $activetemp
 #sed -i '/192.168.1.120/ s/$/ - example/' $activetemp
 #sed -i '/192.168.1.120/ s/$/ - example/' $activetemp
 #sed -i '/192.168.1.120/ s/$/ - example/' $activetemp
+
+########################################################################
+# If you wish to use the output in a webpage...
+########################################################################
+#/bin/sed -i 's/$/<br \/>/' $activetemp
+
 
 ########################################################################
 # Finishing processing so it looks pretty
