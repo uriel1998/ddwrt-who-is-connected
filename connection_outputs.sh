@@ -13,10 +13,10 @@
 ########################################################################
 # Declarations
 ########################################################################
-storetemp=$(tempfile)
-scratch=$(tempfile)
-hosttemp=$(tempfile)
-activetemp=$(tempfile)
+storetemp=$(mktemp)
+scratch=$(mktemp)
+hosttemp=$(mktemp)
+activetemp=$(mktemp)
 
 declare outfile
 declare routergateway
@@ -106,7 +106,7 @@ cat $activetemp | grep -e "*" | sort >> $outfile
 cat $outfile
 
 ########################################################################
-# Cleaning up tempfiles
+# Cleaning up mktemps
 ########################################################################
 rm $storetemp
 rm $scratch
