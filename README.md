@@ -8,17 +8,17 @@ in a file, by default $HOME/client_ips.txt unless passed as the
 first commandline option
 
 
-#Prerequisites
+## Prerequisites
 
 * DD-WRT router (or others that provide hosts,netstat,awk,and grep)
 * Correctly setup passwordless SSH connection with DD-WRT router
 
-#Configuration
+## Configuration
 
 You *must* configure `connection_outputs.sh` with the appropriate names
 of the computers and routers that are connected, and comment out the
 ones that you are not interested in. For example, if the device that
-is statically assigned to 192.168.1.110 is "Spouse's Android" then 
+is statically assigned to 192.168.1.110 is "Spouse's iPhone" then 
 ensure that you have this line:
 
 ```
@@ -35,7 +35,7 @@ If you want to use the output in a webpage, uncomment line 96.
 If you want to use a particular SSH configuration file, see the example
 on line 42
 
-#Utility
+## Utility
 
 Aside from a fairly easy monitoring service (you can have this redirect
 to a local webserver, for example), you can also then use this script
@@ -50,7 +50,7 @@ For a simple example, you could have a cronjob that has the following:
    fi
 ```
 
-(Note that you will have to use the full path of $HOME if you're really
+(Note that you will have to use the full path of `$HOME` if you're really
 using a cron job...)
 
 You can see example.sh as a fairly robust starting point, or even full 
