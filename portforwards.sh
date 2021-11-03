@@ -46,6 +46,9 @@ if [ "$COMMAND" = "DEL" ];then
             done
         fi
     fi
+    if [ -f $(which iptables-save) ];then 
+        iptables-save
+    fi
 fi
 
 # Add forwarding rules for specific port
@@ -107,4 +110,7 @@ if [ "$COMMAND" = "ADD" ];then
                 ;;
         esac
     fi
+    if [ -f $(which iptables-save) ];then 
+        iptables-save
+    fi    
 fi
