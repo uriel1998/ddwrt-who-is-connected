@@ -15,8 +15,8 @@ Both are described in this README.
  1. [About](#1-about)
  2. [License](#2-license)
  3. [Prerequisites](#3-prerequisites)
- 4. [ddwrt-who-is-connected.sh](#4-ddwrt-who-is-connectedsh)
- 5. [portforwards.sh](#5-portforwardssh)
+ 4. [ddwrt-who-is-connected.sh](#4-ddwrt-who-is-connected)
+ 5. [portforwards.sh](#5-portforwards)
 
 ***
 
@@ -43,7 +43,7 @@ This project is licensed under the MIT License. For the full license, see `LICEN
 * DD-WRT router (or others that provide hosts,netstat,awk,and grep)
 * Correctly setup passwordless SSH connection with DD-WRT router
 
-## 4. ddwrt-who-is-connected.sh
+## 4. ddwrt-who-is-connected
 
 ### Configuration
 
@@ -111,7 +111,7 @@ The output file will look like this:
 Please note that additional routers may appear in the "offline" list if
 you have configured them to reject PING requests.
 
-## 5. portforwards.sh
+## 5. portforwards
 
 `portforwards.sh` is designed to be called as part of an SSH connection: 
 
