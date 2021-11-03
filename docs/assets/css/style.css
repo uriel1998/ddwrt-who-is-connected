@@ -12,4 +12,23 @@ margin: 0 auto !important;
     background: none !important;
 }
 
-
+#header nav li.fork {
+    float: left;
+    margin-left: 0px;
+}
+#header nav li {
+    list-style-image: none;
+    color: rgb(232, 230, 227);
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px;
+}
+#header nav li {
+    font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    list-style: none;
+        list-style-image: none;
+    display: inline;
+    color: white;
+    line-height: 50px;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+    font-size: 14px;
+}
