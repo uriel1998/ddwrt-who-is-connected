@@ -15,8 +15,8 @@ Both are described in this README.
  1. [About](#1-about)
  2. [License](#2-license)
  3. [Prerequisites](#3-prerequisites)
- 4. [ddwrt-who-is-connected.sh](#4-ddwrt-who-is-connected.sh)
- 5. [portforwards.sh](#5-portforwards.sh)
+ 4. [ddwrt-who-is-connected.sh](#4-ddwrt-who-is-connectedsh)
+ 5. [portforwards.sh](#5-portforwardssh)
 
 ***
 
