@@ -22,13 +22,13 @@ Both are described in this README.
 
 ## 1. About
 
-### `ddwrt-who-is-connected` is a script to output who all is actively connected 
+* `ddwrt-who-is-connected` is a script to output who all is actively connected 
 to your DD-WRT router. This script is designed to get current active 
 connections as well as static DHCP leases and return what devices are connected
 in a file, by default $HOME/client_ips.txt unless passed as the first 
 commandline option.
 
-### `portforwards.sh` was written for when you have a service you intermittently 
+* `portforwards.sh` was written for when you have a service you intermittently 
 need to open to the internet, but you want to only open the port when the 
 service is running.  For example, you have a game server you only spin up when 
 you and your pals are playing together, or - in combination with `ddwrt-who-is-connected` - 
